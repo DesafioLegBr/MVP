@@ -25,6 +25,36 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+
+    //Layout
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:customtabs:26.+'
+
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+
+    //Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+
+
+    //OkHttp
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.squareup.okio:okio:1.12.0'
+
+    //Gson
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+
+    //RxJava
+    compile 'io.reactivex:rxjava:1.1.2'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+
+//    //Dagger
+//    compile "com.google.dagger:dagger:2.9"
+//    annotationProcessor "com.google.dagger:dagger-compiler:2.9"
+//    provided 'javax.annotation:jsr250-api:1.0'
 }
