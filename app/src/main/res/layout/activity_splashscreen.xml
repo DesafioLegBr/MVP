@@ -10,9 +10,9 @@
         android:id="@+id/outletImageSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="80dp"
+        android:padding="40dp"
         android:contentDescription="@string/logosplash"
-        android:src="@drawable/splashscreen_icon"
+        android:src="@drawable/splashscreen_desafio"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
