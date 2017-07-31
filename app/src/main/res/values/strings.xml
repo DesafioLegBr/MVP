@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DesafioLegBr</string>
+    <string name="logosplash">splash_image_description</string>
 </resources>
