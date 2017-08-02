@@ -56,6 +56,9 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
 
+    //AppIntro
+    compile 'com.github.apl-devs:appintro:v4.2.2'
+
 //    //Dagger
 //    compile "com.google.dagger:dagger:2.9"
 //    annotationProcessor "com.google.dagger:dagger-compiler:2.9"

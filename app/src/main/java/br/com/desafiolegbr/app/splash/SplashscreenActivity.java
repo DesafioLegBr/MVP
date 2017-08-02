@@ -1,15 +1,14 @@
-package br.com.desafiolegbr.splashscreen;
+package br.com.desafiolegbr.app.splash;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
-import android.view.ViewPropertyAnimator;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 
 import br.com.desafiolegbr.R;
+import br.com.desafiolegbr.app.intro.IntroActivity;
 import br.com.desafiolegbr.databinding.ActivitySplashscreenBinding;
 
 /**
@@ -36,9 +35,13 @@ public class SplashscreenActivity extends Activity {
                 mBinding.outletImageSplash.animate().scaleX(0).scaleY(0).setDuration(500);
             }
         };
-        mBinding.outletImageSplash.animate().rotation(360 * 5).setDuration(1000 * 1 + 500)
+        mBinding.outletImageSplash.animate().rotation(-360 * 5).setDuration(1000 * 1 + 500)
                 .setInterpolator(new FastOutSlowInInterpolator()).withEndAction(endAction);
 
     }
 
+    private void launchIntroActivity(){
+        Intent intent = new Intent(SplashscreenActivity.this, IntroActivity.class);
+        startActivity(intent);
+    }
 }
