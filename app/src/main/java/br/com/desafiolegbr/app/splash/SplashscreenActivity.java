@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 
@@ -33,6 +34,17 @@ public class SplashscreenActivity extends Activity {
             @Override
             public void run() {
                 mBinding.outletImageSplash.animate().scaleX(0).scaleY(0).setDuration(500);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        launchIntroActivity();
+
+                    }
+                },1000);
+
             }
         };
         mBinding.outletImageSplash.animate().rotation(-360 * 5).setDuration(1000 * 1 + 500)
