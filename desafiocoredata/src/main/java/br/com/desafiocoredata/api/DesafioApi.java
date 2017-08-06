@@ -3,7 +3,6 @@ package br.com.desafiocoredata.api;
 import br.com.desafiocoredata.model.blocos.BlocoByIdResponse;
 import br.com.desafiocoredata.model.blocos.BlocosResponse;
 import br.com.desafiocoredata.model.partidos.PartidosResponse;
-import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import rx.Observable;
@@ -11,13 +10,13 @@ import rx.Observable;
 public interface DesafioApi {
 
     //BLOCOS
-    @GET("/api/v2//blocos")
+    @GET("/api/v2/blocos")
     Observable<BlocosResponse> getBlocos();
 
-    @GET("/api/v2//blocos/{id}")
+    @GET("/api/v2/blocos/{id}")
     Observable<BlocoByIdResponse> getBloco(@Path("id") String id);
 
-//    //VOTAÇÕES
+    //    //VOTAÇÕES
 //    @GET("/votacoes/{id}")
 //    Call<> getVoteInfoById(@Path("id") String id);
 //

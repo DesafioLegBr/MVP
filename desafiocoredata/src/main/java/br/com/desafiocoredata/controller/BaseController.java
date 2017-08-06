@@ -7,7 +7,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public abstract class BaseController implements BaseControllerInterface {
 
+    CoreDataCallback callback;
 
+    public BaseController(CoreDataCallback callback) {
+        this.callback = callback;
+    }
 
     protected <T> T getService(final Class<T> clazz, final String endPoint) {
         final Retrofit retrofit = new Retrofit.Builder()

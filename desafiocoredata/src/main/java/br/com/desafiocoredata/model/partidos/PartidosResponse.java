@@ -3,9 +3,10 @@ package br.com.desafiocoredata.model.partidos;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class PartidosResponse implements Parcelable {
 

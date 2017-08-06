@@ -17,6 +17,10 @@ public class ApiController extends BaseController {
 
     private static final String TAG = "ApiController";
 
+    public ApiController(CoreDataCallback callback) {
+        super(callback);
+    }
+
     @Override
     public void call() {
         DesafioApi service = getService(DesafioApi.class, Constants.ENDPOINT);
@@ -46,11 +50,18 @@ public class ApiController extends BaseController {
             @Override
             public void onError(Throwable e) {
                 Log.e(TAG, "onError: Combined Error", e);
+
+                if (callback != null) {
+                    callback.onError(e.getMessage());
+                }
             }
 
             @Override
             public void onNext(CombinedApiResponse combinedApiResponse) {
                 Log.d(TAG, "onNext: Combined Next");
+                if (callback != null) {
+                    callback.onSuccess(combinedApiResponse);
+                }
             }
         });
 

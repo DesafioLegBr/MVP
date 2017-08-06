@@ -1,4 +1,3 @@
-
 package br.com.desafiocoredata.model.blocos;
 
 import android.os.Parcel;
