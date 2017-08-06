@@ -26,6 +26,7 @@ public class SplashscreenActivity extends Activity {
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splashscreen);
         setupAnimation();
+
     }
 
     private void setupAnimation() {
@@ -52,7 +53,7 @@ public class SplashscreenActivity extends Activity {
 
     }
 
-    private void launchIntroActivity(){
+    private void launchIntroActivity() {
         Intent intent = new Intent(SplashscreenActivity.this, IntroActivity.class);
         startActivity(intent);
     }
