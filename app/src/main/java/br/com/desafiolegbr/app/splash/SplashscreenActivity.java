@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 
+import br.com.desafiocoredata.controller.ApiController;
 import br.com.desafiolegbr.R;
 import br.com.desafiolegbr.app.intro.IntroActivity;
 import br.com.desafiolegbr.databinding.ActivitySplashscreenBinding;
@@ -25,6 +26,9 @@ public class SplashscreenActivity extends Activity {
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splashscreen);
         setupAnimation();
+
+        ApiController controller = new ApiController();
+        controller.call();
     }
 
     private void setupAnimation() {

@@ -1,16 +1,13 @@
-
-package br.com.desafiocoredata.model.blocos;
+package br.com.desafiocoredata.model.partidos;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class BlocosResponse implements Parcelable {
+public class PartidosResponse implements Parcelable {
 
     @SerializedName("dados")
     @Expose
@@ -43,29 +40,27 @@ public class BlocosResponse implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeList(this.dados);
-        dest.writeList(this.links);
+        dest.writeTypedList(this.dados);
+        dest.writeTypedList(this.links);
     }
 
-    public BlocosResponse() {
+    public PartidosResponse() {
     }
 
-    protected BlocosResponse(Parcel in) {
-        this.dados = new ArrayList<Dado>();
-        in.readList(this.dados, Dado.class.getClassLoader());
-        this.links = new ArrayList<Link>();
-        in.readList(this.links, Link.class.getClassLoader());
+    protected PartidosResponse(Parcel in) {
+        this.dados = in.createTypedArrayList(Dado.CREATOR);
+        this.links = in.createTypedArrayList(Link.CREATOR);
     }
 
-    public static final Parcelable.Creator<BlocosResponse> CREATOR = new Parcelable.Creator<BlocosResponse>() {
+    public static final Parcelable.Creator<PartidosResponse> CREATOR = new Parcelable.Creator<PartidosResponse>() {
         @Override
-        public BlocosResponse createFromParcel(Parcel source) {
-            return new BlocosResponse(source);
+        public PartidosResponse createFromParcel(Parcel source) {
+            return new PartidosResponse(source);
         }
 
         @Override
-        public BlocosResponse[] newArray(int size) {
-            return new BlocosResponse[size];
+        public PartidosResponse[] newArray(int size) {
+            return new PartidosResponse[size];
         }
     };
 }

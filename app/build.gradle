@@ -39,6 +39,8 @@ dependencies {
     //AppIntro
     compile 'com.github.apl-devs:appintro:v4.2.2'
 
+    compile project(':desafiocoredata')
+
 //    //Dagger
 //    compile "com.google.dagger:dagger:2.9"
 //    annotationProcessor "com.google.dagger:dagger-compiler:2.9"
